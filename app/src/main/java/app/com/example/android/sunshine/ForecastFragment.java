@@ -71,7 +71,7 @@ public class ForecastFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        String[] forecastArray = {
+        /*String[] forecastArray = {
                 "Today = Sunny - 88/63",
                 "Tomorrow - Foggy  - 70/40",
                 "Weds - Cloudy - 72/63",
@@ -79,7 +79,9 @@ public class ForecastFragment extends Fragment {
                 "Fri - Heavy Rain - 65/56",
                 "Sat - HELP TRAPPED IN WEATHERSTATION - 60/51",
                 "Sun - Sunny - 80/60"
-        };
+        };*/
+
+        String[] forecastArray = {};
 
         List<String> weekForecast = new ArrayList<String>(
                 Arrays.asList(forecastArray)
@@ -235,7 +237,7 @@ public class ForecastFragment extends Fragment {
             String forecastJsonStr = null;
             String format = "json";
             String units = "imperial";
-            int numDays = 7;
+            int numDays = 5;
 
             try {
                 // Construct the URL for the OpenWeatherMap query
