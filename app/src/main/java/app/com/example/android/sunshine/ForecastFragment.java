@@ -73,7 +73,7 @@ public class ForecastFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        /*String[] forecastArray = {
+        String[] forecastArray = {
                 "Today = Sunny - 88/63",
                 "Tomorrow - Foggy  - 70/40",
                 "Weds - Cloudy - 72/63",
@@ -81,9 +81,9 @@ public class ForecastFragment extends Fragment {
                 "Fri - Heavy Rain - 65/56",
                 "Sat - HELP TRAPPED IN WEATHERSTATION - 60/51",
                 "Sun - Sunny - 80/60"
-        };*/
+        };
 
-        String[] forecastArray = {};
+        //String[] forecastArray = {};
 
         List<String> weekForecast = new ArrayList<String>(
                 Arrays.asList(forecastArray)
@@ -100,19 +100,15 @@ public class ForecastFragment extends Fragment {
 
         ListView listView = (ListView) rootView.findViewById(R.id.listview_forecast);
         listView.setAdapter(forecastAdapter);
+
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
                 String forecast = forecastAdapter.getItem(position);
                 Toast.makeText(getActivity(), forecast, Toast.LENGTH_SHORT).show();
 
             }
         });
-
-
-
-
-
 
         return rootView;
     }
