@@ -11,8 +11,9 @@
         android:singleLine="true" />
 
     <ListPreference
-        android:key="units"
         android:title="Units"
+        android:key="units"
         android:defaultValue="metric"
-        android:entryValues="@array/Units"/>
+        android:entries="@array/unitsArray"
+        android:entryValues="@array/unitsValues"/>
 </PreferenceScreen>
